@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VÉRA Balance</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="balance.html">Balance</a>
+        <a href="moon.html">Moon</a>
+        <a href="swim.html">Swim</a>
+        <a href="about.html">About</a>
+        <a href="contacto.html">Contacto</a>
+
+       <a href="carrito.html" class="icono-carrito">
+    <span class="bolsa"></span>
+    <span id="contador-carrito">0</span>
+</a>
+    </nav>
+</header>
+
+
+<section class="coleccion-hero balance-hero">
+
+    <div class="coleccion-hero-content">
+        <h1>Balance</h1>
+        <p>Move with confidence.</p>
+    </div>
+
+</section>
+
+
+<section class="productos">
+
+
+    <!-- =========================
+         TOP AZUL
+         ========================= -->
+
+    <div class="tarjeta producto">
+
+        <a href="top-azul-balance.html" class="producto-imagen-link">
+
+            <div class="producto-imagenes producto-hover">
+
+                <img src="images/top azul balance.jpeg"
+                     alt="Top Azul Balance">
+
+                <img src="images/top azul balance 1.jpeg"
+                     alt="Top Azul Balance atrás">
+
+            </div>
+
+        </a>
+
+        <h3>Top Azul Balance</h3>
+
+        <p class="talla">Unitalla</p>
+
+        <p class="precio">$250</p>
+
+        <button onclick="agregarAlCarrito(
+            'Top Azul Balance',
+            250,
+            'images/top azul balance.jpeg'
+        )">
+            Agregar al carrito
+        </button>
+
+    </div>
+
+
+
+    <!-- =========================
+         TOP NEGRO
+         ========================= -->
+
+    <div class="tarjeta producto">
+
+        <a href="top-negro-balance.html" class="producto-imagen-link">
+
+            <div class="producto-imagenes producto-hover">
+
+                <img src="images/top negro balance .jpeg"
+                     alt="Top Negro Balance">
+
+                <img src="images/top negro balance 1.jpeg"
+                     alt="Top Negro Balance atrás">
+
+            </div>
+
+        </a>
+
+        <h3>Top Negro Balance</h3>
+
+        <p class="talla">Unitalla</p>
+
+        <p class="precio">$250</p>
+
+        <button onclick="agregarAlCarrito(
+            'Top Negro Balance',
+            250,
+            'images/top negro balance .jpeg'
+        )">
+            Agregar al carrito
+        </button>
+
+    </div>
+
+
+
+    <!-- =========================
+         CHAMARRA AZUL
+         ========================= -->
+
+    <div class="tarjeta producto">
+
+        <a href="chamarra-azul-balance.html" class="producto-imagen-link">
+
+            <div class="producto-imagenes">
+
+                <img src="images/chamarra azul balance.jpeg"
+                     alt="Chamarra Azul Balance">
+
+            </div>
+
+        </a>
+
+        <h3>Chamarra Azul Balance</h3>
+
+        <p class="talla">Talla M/L</p>
+
+        <p class="precio">$299</p>
+
+        <button onclick="agregarAlCarrito(
+            'Chamarra Azul Balance',
+            299,
+            'images/chamarra azul balance.jpeg'
+        )">
+            Agregar al carrito
+        </button>
+
+    </div>
+
+
+
+    <!-- =========================
+         CHAMARRA NEGRA
+         ========================= -->
+
+    <div class="tarjeta producto">
+
+        <a href="chamarra-negra-balance.html" class="producto-imagen-link">
+
+            <div class="producto-imagenes">
+
+                <img src="images/chamarra negra balance.jpeg"
+                     alt="Chamarra Negra Balance">
+
+            </div>
+
+        </a>
+
+        <h3>Chamarra Negra Balance</h3>
+
+        <p class="talla">Talla M/L</p>
+
+        <p class="precio">$299</p>
+
+        <button onclick="agregarAlCarrito(
+            'Chamarra Negra Balance',
+            299,
+            'images/chamarra negra balance.jpeg'
+        )">
+            Agregar al carrito
+        </button>
+
+    </div>
+
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

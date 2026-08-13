@@ -1,0 +1,1115 @@
+/* ========================================
+   VÉRA — ESTILOS GENERALES
+   ======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #6f5a8e;
+    color: white;
+    font-family: "Cormorant Garamond", serif;
+}
+
+h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    letter-spacing: 3px;
+    margin: 0 0 15px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+    color: #6f5a8e;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #f3edf8;
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   MENÚ
+   ======================================== */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+
+/* ========================================
+   HERO PRINCIPAL
+   ======================================== */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    top: 0;
+    left: 0;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ========================================
+   COLECCIONES — INICIO
+   ======================================== */
+
+.colecciones {
+    padding-top: 55px;
+    padding-bottom: 80px;
+}
+
+.contenedor-colecciones {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.coleccion-card {
+    width: 300px;
+    height: 400px;
+
+    box-sizing: border-box;
+    border-radius: 20px;
+    overflow: hidden;
+
+    text-decoration: none;
+    position: relative;
+
+    transition: 0.4s;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.coleccion-card:hover {
+    transform: translateY(-8px);
+}
+
+.coleccion-card.balance {
+    background-image: url("images/balance.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.coleccion-card.moon {
+    background-image: url("images/moon.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.coleccion-card.swim {
+    background-image: url("images/swim.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.coleccion-info {
+    width: 100%;
+    padding: 30px 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.coleccion-info h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    color: white;
+    margin: 0 0 5px;
+}
+
+.coleccion-info p {
+    color: white;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* ========================================
+   HERO DE BALANCE / MOON / SWIM
+   ======================================== */
+
+.coleccion-hero {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coleccion-hero-content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.balance-hero {
+    background-image: url("images/balance.jpeg");
+    background-size: cover;
+    background-position: center 30%;
+}
+
+.balance-hero::after,
+.moon-hero::after,
+.swim-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.moon-hero {
+    background-image: url("images/moon.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.swim-hero {
+    background-image: url("images/swim.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ========================================
+   PRODUCTOS
+   ======================================== */
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    justify-content: center;
+    gap: 35px;
+
+    padding: 80px 30px;
+}
+
+.tarjeta {
+    width: 250px;
+    min-height: 480px;
+
+    background-color: white;
+    border-radius: 20px;
+
+    padding: 15px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    color: #6f5a8e;
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+}
+
+
+/* FOTOS DE PRODUCTOS */
+
+.producto-imagenes {
+    position: relative;
+
+    width: 100%;
+    height: 330px;
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    margin-bottom: 15px;
+
+    flex-shrink: 0;
+}
+
+.producto-imagenes img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: opacity 0.5s ease;
+}
+
+
+/* CAMBIO FRENTE / ATRÁS */
+
+.producto-hover img:first-child {
+    opacity: 1;
+}
+
+.producto-hover img:last-child {
+    opacity: 0;
+}
+
+.producto-hover:hover img:first-child {
+    opacity: 0;
+}
+
+.producto-hover:hover img:last-child {
+    opacity: 1;
+}
+
+
+/* NOMBRE */
+
+.tarjeta h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 600;
+
+    color: #6f5a8e;
+
+    text-align: center;
+
+    margin: 0 0 2px;
+}
+
+
+/* TALLA */
+
+.producto .talla {
+    color: #6f5a8e;
+    font-size: 15px;
+
+    margin: 0 0 2px;
+}
+
+
+/* PRECIO */
+
+.producto .precio {
+    color: #6f5a8e;
+    font-size: 18px;
+    font-weight: 500;
+
+    margin: 0 0 12px;
+}
+
+
+/* BOTÓN PRODUCTO */
+
+.tarjeta button {
+    margin-top: 0;
+
+    padding: 11px 25px;
+
+    border: 1px solid #6f5a8e;
+    border-radius: 30px;
+
+    background: transparent;
+    color: #6f5a8e;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.tarjeta button:hover {
+    background-color: #6f5a8e;
+    color: white;
+
+    transform: none;
+}
+
+
+/* FOTO QUE ABRE PRODUCTO */
+
+.producto-imagen-link {
+    display: block;
+    width: 100%;
+    height: 330px;
+
+    text-decoration: none;
+}
+
+.producto-imagen-link:hover {
+    opacity: 1;
+}
+
+
+/* ========================================
+   PÁGINA INDIVIDUAL DE PRODUCTO
+   ======================================== */
+
+.producto-detalle {
+    min-height: 100vh;
+
+    padding: 150px 8% 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.producto-fotos {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.foto-principal {
+    width: 100%;
+    height: 650px;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    background: white;
+}
+
+.foto-principal img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* MINIATURAS */
+
+.miniaturas {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.miniaturas img {
+    width: 90px;
+    height: 110px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.miniaturas img:hover {
+    transform: translateY(-4px);
+}
+
+
+/* INFORMACIÓN */
+
+.producto-info {
+    max-width: 500px;
+}
+
+.producto-info .coleccion {
+    color: white;
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.producto-info h1 {
+    text-align: left;
+    font-size: 65px;
+    line-height: 0.95;
+    margin: 0 0 25px;
+}
+
+.detalle-precio {
+    text-align: left;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.detalle-talla {
+    text-align: left;
+    color: white;
+    font-size: 18px;
+}
+
+.descripcion-producto {
+    text-align: left;
+    color: white;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 30px 0;
+}
+
+.boton-agregar-detalle {
+    margin-top: 10px;
+
+    width: 100%;
+    padding: 17px;
+
+    border: 1px solid white;
+    border-radius: 30px;
+
+    background: white;
+    color: #6f5a8e;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton-agregar-detalle:hover {
+    background: transparent;
+    color: white;
+    transform: none;
+}
+
+
+/* ========================================
+   ABOUT
+   ======================================== */
+
+.about-hero {
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 20px;
+}
+
+.about-content {
+    max-width: 700px;
+    text-align: center;
+}
+
+.about-content h1 {
+    font-size: 70px;
+    margin-bottom: 50px;
+}
+
+.about-content p {
+    font-size: 19px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.about-signature {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.about-signature h2 {
+    font-size: 55px;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+
+.about-signature p {
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+
+/* ========================================
+   CONTACTO
+   ======================================== */
+
+.contacto-hero {
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px 20px;
+}
+
+.contacto-content {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.contacto-content h1 {
+    margin-bottom: 20px;
+}
+
+.contacto-intro {
+    margin-bottom: 60px;
+}
+
+.contacto-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.contacto-item {
+    padding: 35px 20px;
+
+    background: white;
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.contacto-item:hover {
+    transform: translateY(-6px);
+}
+
+.contacto-item h2 {
+    color: #6f5a8e;
+    font-size: 32px;
+    margin: 0 0 10px;
+}
+
+.contacto-item p {
+    color: #6f5a8e;
+    font-size: 17px;
+    margin: 0;
+}
+
+
+/* ========================================
+   CARRITO
+   ======================================== */
+
+.carrito {
+    min-height: 80vh;
+    padding: 150px 30px 80px;
+    text-align: center;
+}
+
+.carrito h1 {
+    font-size: 70px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+#lista-carrito {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.producto-carrito {
+    background: white;
+    border-radius: 20px;
+
+    padding: 25px 30px;
+    margin-bottom: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+
+    align-items: center;
+
+    gap: 30px;
+
+    text-align: left;
+}
+
+.producto-carrito h3 {
+    color: #6f5a8e;
+    font-size: 28px;
+    font-weight: 600;
+
+    margin: 0 0 5px;
+}
+
+.producto-carrito p {
+    color: #6f5a8e;
+    font-size: 17px;
+
+    margin: 0;
+
+    text-align: left;
+}
+
+.producto-carrito strong {
+    color: #6f5a8e;
+    font-size: 19px;
+}
+
+
+/* CANTIDAD */
+
+.cantidad {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cantidad button {
+    width: 35px;
+    height: 35px;
+
+    padding: 0;
+    margin: 0;
+
+    border: 1px solid #6f5a8e;
+
+    background: transparent;
+    color: #6f5a8e;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+.cantidad button:hover {
+    background: #6f5a8e;
+    color: white;
+
+    transform: none;
+}
+
+.cantidad span {
+    color: #6f5a8e;
+    font-size: 18px;
+
+    min-width: 20px;
+
+    text-align: center;
+}
+
+
+/* ELIMINAR */
+
+.producto-carrito > button {
+    margin: 0;
+    padding: 8px 15px;
+
+    background: transparent;
+    border: none;
+
+    color: #6f5a8e;
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.producto-carrito > button:hover {
+    background: transparent;
+    transform: none;
+    opacity: 0.6;
+}
+
+
+/* CARRITO VACÍO */
+
+.carrito-vacio {
+    max-width: 600px;
+
+    margin: 0 auto;
+    padding: 60px 30px;
+
+    background: white;
+
+    border-radius: 20px;
+}
+
+.carrito-vacio p {
+    color: #6f5a8e;
+    font-size: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+/* TOTAL */
+
+.total-carrito {
+    width: 90%;
+    max-width: 900px;
+
+    margin: 40px auto 30px;
+
+    text-align: right;
+}
+
+.total-carrito h2 {
+    color: white;
+    font-size: 38px;
+
+    margin: 0;
+}
+
+
+/* BOTÓN SEGUIR COMPRANDO */
+
+.carrito > a button,
+.carrito-vacio button {
+    margin-top: 20px;
+
+    padding: 15px 35px;
+
+    border: none;
+    border-radius: 30px;
+
+    background-color: white;
+    color: #6f5a8e;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.carrito > a button:hover,
+.carrito-vacio button:hover {
+    background-color: #f3edf8;
+    transform: scale(1.05);
+}
+
+
+/* ========================================
+   CARRITO EN EL MENÚ
+   ======================================== */
+
+.icono-carrito {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#contador-carrito {
+    font-size: 13px;
+
+    background: white;
+    color: #6f5a8e;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 850px) {
+
+    .productos {
+        grid-template-columns: repeat(2, 250px);
+    }
+
+    .producto-detalle {
+        grid-template-columns: 1fr;
+
+        padding: 130px 25px 60px;
+
+        gap: 40px;
+    }
+
+    .foto-principal {
+        height: 500px;
+    }
+
+    .producto-info h1 {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .producto-info .coleccion,
+    .detalle-precio,
+    .detalle-talla,
+    .descripcion-producto {
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        gap: 15px;
+        padding: 20px 10px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .carrito {
+        padding: 130px 15px 60px;
+    }
+
+    .carrito h1 {
+        font-size: 55px;
+    }
+
+    .producto-carrito {
+        grid-template-columns: 1fr;
+        gap: 15px;
+
+        text-align: center;
+    }
+
+    .producto-carrito p {
+        text-align: center;
+    }
+
+    .cantidad {
+        justify-content: center;
+    }
+
+    .total-carrito {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .productos {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+/* ==============================
+   ICONO CARRITO VÉRA
+   ============================== */
+
+.icono-carrito {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.bolsa {
+    position: relative;
+    width: 17px;
+    height: 19px;
+    border: 1.5px solid white;
+    border-radius: 2px 2px 4px 4px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.bolsa::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 6px;
+    border: 1.5px solid white;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    left: 50%;
+    top: -6px;
+    transform: translateX(-50%);
+}
+
+#contador-carrito {
+    font-size: 12px;
+    background: white;
+    color: #6f5a8e;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shop-now {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+    color: #6f5a8e;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.shop-now:hover {
+    background-color: #f3edf8;
+    transform: scale(1.05);
+}
+/* ==============================
+   FOTO DEL PRODUCTO EN CARRITO
+   ============================== */
+
+.producto-carrito {
+    grid-template-columns: 110px 1fr auto auto auto;
+    gap: 25px;
+    padding: 18px 25px;
+    align-items: center;
+}
+
+/* FOTO */
+
+.producto-carrito .foto-carrito {
+    width: 100px;
+    height: 120px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.producto-carrito .foto-carrito img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* INFORMACIÓN */
+
+.producto-carrito h3 {
+    margin-bottom: 3px;
+}
+
+.producto-carrito p {
+    margin: 0;
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .producto-carrito {
+        grid-template-columns: 90px 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .producto-carrito .foto-carrito {
+        width: 90px;
+        height: 110px;
+    }
+
+    .producto-carrito .cantidad,
+    .producto-carrito > div:nth-last-child(2),
+    .producto-carrito > button {
+        grid-column: 1 / -1;
+    }
+}

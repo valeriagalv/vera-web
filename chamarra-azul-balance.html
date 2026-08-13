@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chamarra Azul Balance | VÉRA</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="balance.html">Balance</a>
+        <a href="moon.html">Moon</a>
+        <a href="swim.html">Swim</a>
+        <a href="about.html">About</a>
+        <a href="contacto.html">Contacto</a>
+
+        <a href="carrito.html" class="icono-carrito">
+    <span class="bolsa"></span>
+    <span id="contador-carrito">0</span>
+</a>
+    </nav>
+</header>
+
+
+<section class="producto-detalle">
+
+    <div class="producto-fotos">
+
+        <div class="foto-principal">
+            <img id="fotoProducto"
+                 src="images/chamarra azul balance.jpeg"
+                 alt="Chamarra Azul Balance">
+        </div>
+
+        <div class="miniaturas">
+
+            <img src="images/chamarra azul balance.jpeg"
+                 onclick="cambiarFoto('images/chamarra azul balance.jpeg')">
+
+        </div>
+
+    </div>
+
+
+    <div class="producto-info">
+
+        <p class="coleccion">BALANCE</p>
+
+        <h1>Chamarra Azul Balance</h1>
+
+        <p class="detalle-precio">$299</p>
+
+        <p class="detalle-talla">
+            Talla: <strong>M/L</strong>
+        </p>
+
+        <p class="descripcion-producto">
+            Chamarra ligera y versátil, diseñada para acompañarte
+            antes, durante y después de tu entrenamiento.
+        </p>
+
+        <button
+            class="boton-agregar-detalle"
+            onclick="agregarAlCarrito(
+                'Chamarra Azul Balance',
+                299,
+                'images/chamarra azul balance.jpeg'
+            )">
+
+            Agregar al carrito
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+<script>
+
+function cambiarFoto(foto) {
+    document.getElementById("fotoProducto").src = foto;
+}
+
+</script>
+
+</body>
+</html>
